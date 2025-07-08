@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wingo Prediction Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Wingo Prediction Tool</h1>
+
+    <label>
+      Sequence Number (Last 4 digits):
+      <input type="text" id="sequenceNumber" maxlength="4" placeholder="e.g. 1289" />
+    </label>
+
+    <button onclick="startAutoPrediction()">Start Prediction</button>
+    <button onclick="stopAutoPrediction()">Stop</button>
+
+    <div id="result"></div>
+
+    <script src="wingo.js"></script>
+  </div>
+</body>
+</html>
