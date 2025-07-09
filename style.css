@@ -17,10 +17,10 @@ body {
 input, select, button {
   margin-top: 10px;
   display: block;
-  width: 100%;
-  padding: 8px;
+  width: auto;
+  padding: 2px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 2px;
   border: 1px solid #ccc;
 }
 
@@ -42,10 +42,67 @@ button:hover {
   border-top: 1px solid #ccc;
 }
 
-ul {
-  padding-left: 20px;
+.prediction-entry {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
 }
 
-li {
-  margin-bottom: 5px;
+.prediction-entry.win {
+  background-color: #d4edda;
+}
+
+.prediction-entry.lose {
+  background-color: #f8d7da;
+}
+
+.color-circle {
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #333;
+  transition: transform 0.5s ease;
+}
+
+.animated-circle {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.green-purple {
+  background: linear-gradient(45deg, green 50%, purple 50%);
+}
+.red-purple {
+  background: linear-gradient(45deg, red 50%, purple 50%);
+}
+
+.color-label {
+  min-width: 100px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.stats-display {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
 }
